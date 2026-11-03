@@ -25,6 +25,9 @@ blackFriday = campanhaMultiplicadora 5
 aniversarioCliente :: Int -> Int
 aniversarioCliente = campanhaBonus 200
 
+acumula :: (Int -> Int) -> (Int -> Int) -> Int -> Int
+acumula primeira segunda valor = segunda (primeira valor)
+
 main :: IO ()
 main = do
   putStrLn "--- Desafio 1 ---"
@@ -43,3 +46,7 @@ main = do
   print (calculaPontos aniversarioCliente 150)
   print (calculaPontos (campanhaMultiplicadora 4) 25)
   print (calculaPontos (campanhaBonus 30) 25)
+  putStrLn "--- Desafio 4 ---"
+  print (acumula blackFriday aniversarioCliente 150)
+  print (acumula aniversarioCliente blackFriday 150)
+  print (acumula (campanhaMultiplicadora 3) (\p -> p + 100) 60)
