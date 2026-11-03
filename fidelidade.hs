@@ -13,6 +13,18 @@ campanhaDaSemana = pontosEmDobro
 calculaPontos :: (Int -> Int) -> Int -> Int
 calculaPontos regra valor = regra valor
 
+campanhaMultiplicadora :: Int -> (Int -> Int)
+campanhaMultiplicadora n = \p -> p * n
+
+campanhaBonus :: Int -> (Int -> Int)
+campanhaBonus b = \p -> p + b
+
+blackFriday :: Int -> Int
+blackFriday = campanhaMultiplicadora 5
+
+aniversarioCliente :: Int -> Int
+aniversarioCliente = campanhaBonus 200
+
 main :: IO ()
 main = do
   putStrLn "--- Desafio 1 ---"
@@ -26,3 +38,8 @@ main = do
   print (calculaPontos bonus50 80)
   print (calculaPontos (\p -> p * 3) 80)
   print (calculaPontos (\p -> p * 2 + 10) 80)
+  putStrLn "--- Desafio 3 ---"
+  print (calculaPontos blackFriday 150)
+  print (calculaPontos aniversarioCliente 150)
+  print (calculaPontos (campanhaMultiplicadora 4) 25)
+  print (calculaPontos (campanhaBonus 30) 25)
