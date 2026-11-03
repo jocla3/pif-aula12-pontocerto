@@ -4,8 +4,8 @@
 
 | Papel | Nome completo | Usuário do GitHub |
 |---|---|---|
-| Integrante 1 (dono do fork) | | |
-| Integrante 2 (colaborador) | | |
+| Integrante 1 (dono do fork) | João Cláudio Beltrão | jocla3 |
+| Integrante 2 (colaborador) | Marcelo Bresani | mbvo1 |
 
 ## Explicação da solução
 
