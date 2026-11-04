@@ -46,6 +46,7 @@ As duas funções originalmente corretas e as instruções do `main` foram prese
 
 1. Em Haskell, a regra é um valor de função, e a assinatura é `(Int -> Int) -> Int -> Int`. Em C, o parâmetro é um ponteiro para função, declarado como `int (*regra)(int)`.
 2. Haskell aplica a função com `regra valor`, sem parênteses obrigatórios para a chamada; o resultado é a expressão do corpo. C usa `regra(valor)` e devolve o resultado explicitamente com `return`.
+3. 3. Em Haskell dá para passar uma lambda direto para `calculaPontos` ou fabricar regras novas com `campanhaMultiplicadora 5`. Em C padrão não existem lambdas: toda regra precisa ser uma função nomeada, escrita antes do uso, como `pontosEmDobro` e `bonus50`.
 
 ## Evidência de execução
 
