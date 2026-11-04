@@ -27,6 +27,7 @@ As duas promoções têm regras curtas, usadas uma única vez. Passar uma lambda
 **a)** A ordem altera o valor que será multiplicado. Primeiro Black Friday e depois aniversário: `150 * 5 + 200 = 950`. Primeiro aniversário e depois Black Friday: `(150 + 200) * 5 = 1750`. Na segunda ordem, os 200 pontos de bônus também são multiplicados.
 
 **b)** O sistema deve aplicar primeiro `blackFriday` e depois `aniversarioCliente`, usando `acumula blackFriday aniversarioCliente 150`. Assim, multiplica apenas os pontos da compra e acrescenta o bônus ao final, resultando em 950 pontos.
+**Semana do Cliente:** `campanhaMultiplicadora 3` fabrica a regra que triplica os pontos, e a lambda `\p -> p + 100` acrescenta o bônus. Para a compra de R$ 60, `acumula` aplica primeiro a multiplicação e depois a soma: 60 * 3 + 100 = 280 pontos.
 
 ## Desafio 5 — revisão de código
 
